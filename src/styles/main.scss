@@ -1,0 +1,28 @@
+//global
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+//helpers
+
+@import "./helper/colors";
+@import "./helper/tools";
+@import "./helper/fonts";
+
+// pages
+
+@import "./home";
+
+// components
+
+@import "./navbar";
+@import "./searchBox";

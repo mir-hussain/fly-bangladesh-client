@@ -88,9 +88,6 @@ const Login = () => {
               />
             </div>
           </div>
-          <div className='divider-form'>
-            <span>※※※</span>
-          </div>
           <div className='new-user'>
             <p>I am a new user </p>
             <input

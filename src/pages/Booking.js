@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import Seat from "../components/Seat";
 
 const Booking = () => {
+  const [color, setColor] = useState(false);
+
+  const handleClick = () => {
+    setColor(!color);
+  };
+
   return (
     <div>
-      <h1>This is booking</h1>
+      <Seat color={color} handleClick={handleClick} />
     </div>
   );
 };

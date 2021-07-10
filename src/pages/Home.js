@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchBox from "../components/SearchBox";
 
 const Home = () => {
@@ -8,7 +8,6 @@ const Home = () => {
         <p>plan your travel with Fly Bangladesh.</p>
         <h1>Where are you going?</h1>
       </div>
-      <SearchBox />
     </section>
   );
 };

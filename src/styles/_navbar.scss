@@ -13,7 +13,7 @@ nav {
     }
   }
   ul {
-    @include center;
+    @include center(row);
     li {
       margin-left: 2em;
       font-size: 1.2em;

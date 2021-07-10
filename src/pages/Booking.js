@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import Seat from "../components/Seat";
+import { useParams } from "react-router";
 
 const Booking = () => {
-  const [color, setColor] = useState(false);
-
-  const handleClick = () => {
-    setColor(!color);
-  };
-
+  const { id } = useParams();
   return (
     <div>
-      <Seat color={color} handleClick={handleClick} />
+      <p>{id}</p>
     </div>
   );
 };

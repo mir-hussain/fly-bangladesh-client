@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { currentDate } from "./time";
 
 const SearchBox = () => {
-  // const today = new Date()
-  // console.log(today);
-  // console.log(today.getDay());
-  // console.log(today.getMonth());
-  // console.log(today.getFullYear());
-
   const [destination, setDestination] =
     useState("chittagong");
-  const [date, setDate] = useState("2021-07-10");
+
+  const [date, setDate] = useState(currentDate);
 
   const handleDestination = (event) => {
     const to = event.target.value;
@@ -44,9 +40,9 @@ const SearchBox = () => {
           onChange={handleDestination}
           required
         >
-          <option value='chittagong'>Chittagong</option>
-          <option value='india'>India</option>
-          <option value='usa'>USA</option>
+          <option value='Chittagong'>Chittagong</option>
+          <option value='India'>India</option>
+          <option value='USA'>USA</option>
         </select>
       </div>
       <div>
@@ -54,10 +50,9 @@ const SearchBox = () => {
           type='date'
           name='date'
           id='date'
-          min='2021-07-10'
+          min={currentDate}
           max='2021-07-15'
           onChange={handleDate}
-          value='2021-07-10'
           required
         />
       </div>

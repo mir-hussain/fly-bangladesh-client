@@ -6,7 +6,7 @@ const Home = () => {
     <section className='home-section'>
       <div>
         <p>plan your travel with Fly Bangladesh.</p>
-        <h1>Where are you going?</h1>
+        <h1>Where are you going??</h1>
       </div>
       <SearchBox />
     </section>

@@ -5,11 +5,12 @@ import { useParams } from "react-router";
 const Booking = () => {
   const { id } = useParams();
   const splitted = id.split("+");
-  const [destination, date] = splitted;
+  const [destination, date, className] = splitted;
   return (
     <section className='booking-section'>
       <h1>Destination: {destination}</h1>
       <h1>Date: {date}</h1>
+      <h1>Class: {className}</h1>
     </section>
   );
 };

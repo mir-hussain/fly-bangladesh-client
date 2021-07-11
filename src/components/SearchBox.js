@@ -4,9 +4,10 @@ import { currentDate } from "./time";
 
 const SearchBox = () => {
   const [destination, setDestination] =
-    useState("chittagong");
+    useState("Chittagong");
 
   const [date, setDate] = useState(currentDate);
+  const [className, setClassName] = useState("Business");
 
   const handleDestination = (event) => {
     const to = event.target.value;
@@ -16,6 +17,11 @@ const SearchBox = () => {
   const handleDate = (event) => {
     const selectedDate = event.target.value;
     setDate(selectedDate);
+  };
+
+  const handleClass = (event) => {
+    const selectedClass = event.target.value;
+    setDate(selectedClass);
   };
 
   return (
@@ -46,6 +52,19 @@ const SearchBox = () => {
         </select>
       </div>
       <div>
+        <label htmlFor='class'>Class: </label>
+        <select
+          name='class'
+          id='class'
+          defaultValue='Business'
+          onChange={handleClass}
+          required
+        >
+          <option value='Business'>Business</option>
+          <option value='Economy'>Economy</option>
+        </select>
+      </div>
+      <div>
         <input
           type='date'
           name='date'
@@ -56,7 +75,16 @@ const SearchBox = () => {
           required
         />
       </div>
-      <Link to={"/booking/" + destination + "+" + date}>
+      <Link
+        to={
+          "/booking/" +
+          destination +
+          "+" +
+          date +
+          "+" +
+          className
+        }
+      >
         Find
       </Link>
     </div>
